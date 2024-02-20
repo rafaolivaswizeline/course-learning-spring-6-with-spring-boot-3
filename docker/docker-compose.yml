@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:alpine
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: secure
+    ports:
+      - 5432:5432
