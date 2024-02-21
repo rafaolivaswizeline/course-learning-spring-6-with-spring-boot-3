@@ -1,5 +1,6 @@
 package org.rafaolivas.demo.data.entity;
 
+import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,20 +10,20 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "rooms", schema = "lil")
+@Table(name = "reservations", schema = "lil")
 @Data
-public class Room {
+public class Reservation {
     @Id
-    @Column(name = "room_id")
+    @Column(name = "reservation_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private long reservationId;
+
+    @Column(name = "room_id")
     private long roomId;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "guest_id")
+    private long guestId;
 
-    @Column(name = "room_number")
-    private String roomNumber;
-
-    @Column(name = "bed_info")
-    private String bedInfo;
+    @Column(name = "res_date")
+    private LocalDate resDate;
 }
