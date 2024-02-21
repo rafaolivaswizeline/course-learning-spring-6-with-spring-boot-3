@@ -7,3 +7,8 @@
     2. `docker-compose up -d`
     3. Execute script at `docker/postgres/schema.sql`
     4. Execute script at `docker/postgres/data.sql`
+
+## How was this app built?
+
+1. Navigate to https://start.spring.io/ and generate a project
+2. Decompress the downloaded .zip file to your project
